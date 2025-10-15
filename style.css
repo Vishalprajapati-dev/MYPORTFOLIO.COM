@@ -854,23 +854,39 @@ section {
 
 /* Responsive Design */
 @media (max-width: 992px) {
+    /* HERO SECTION FIX */
     .hero-content {
         flex-direction: column;
+        align-items: center;
         text-align: center;
     }
-    
+
+    .hero-text {
+        margin-left: 0; /* remove unwanted side push */
+    }
+
     .hero-description {
         margin: 0 auto 30px;
     }
-    
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        justify-content: center;
+    }
+
+    /* ABOUT + CONTACT responsive grid */
     .about-content {
         grid-template-columns: 1fr;
     }
-    
+
     .contact-content {
         grid-template-columns: 1fr;
     }
 }
+
 
 @media (max-width: 768px) {
     .section-title {
@@ -945,5 +961,11 @@ section {
     .projects-grid,
     .certifications-container {
         grid-template-columns: 1fr;
+    }
+
+    /* Small phone padding fix */
+    .container {
+        width: 95%;
+        padding: 0 15px;
     }
 }
