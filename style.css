@@ -854,38 +854,6 @@ section {
 
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  /* Center the hero section and image properly */
-  .hero,
-  .hero-content,
-  .hero-text,
-  .hero-image {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 0 auto;
-    padding: 0;
-  }
-
-  .hero-image img {
-    max-width: 250px;
-    height: auto;
-    border-radius: 50%;
-  }
-
-  /* Ensure full width content doesn't shift */
-  .container {
-    width: 100%;
-    margin: 0;
-    padding: 0 10px;
-    box-sizing: border-box;
-  }
-}
-
-
-
 
 @media (max-width: 768px) {
     .section-title {
@@ -913,7 +881,7 @@ section {
         transition: var(--transition);
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     }
-    
+
     .nav-menu.active {
         right: 0;
     }
@@ -945,6 +913,7 @@ section {
     }
 }
 
+
 @media (max-width: 576px) {
     .hero-buttons {
         flex-direction: column;
@@ -968,3 +937,24 @@ section {
         padding: 0 15px;
     }
 }
+
+
+/* === Final Mobile Center Fix === */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-text {
+    margin-left: 0; /* Remove desktop margin */
+  }
+
+  .hero-image {
+    margin-top: 2rem;
+  }
+}
+
+
