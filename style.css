@@ -862,10 +862,11 @@ section {
     
     /* 👈 NEW: Ensure the hero-text gets full width and no margins */
     .hero-text { 
-        width: 100%;
+        /* width: 100%; */
         margin-left: 0; 
         margin-right: 0;
         padding: 0 20px; /* Optional: adds a little breathing room on the sides */
+        width: 100%;
     }
 
     .hero-description {
