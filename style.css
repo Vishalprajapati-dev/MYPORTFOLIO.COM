@@ -246,7 +246,7 @@ section {
 }
 
 .hero-text {
-    margin-left: 4rem;
+    /* margin-left: 4rem; */
     flex: 1;
 }
 
@@ -855,15 +855,19 @@ section {
 
 /* Responsive Design */
 @media (max-width: 992px) {
-    .hero-content {
+   .hero-content {
         flex-direction: column;
         text-align: center;
     }
-    .hero-text {
-        margin-left: 0; 
-        padding: 0 20px; 
-    }
     
+    /* 👈 NEW: Ensure the hero-text gets full width and no margins */
+    .hero-text { 
+        width: 100%;
+        margin-left: 0; 
+        margin-right: 0;
+        padding: 0 20px; /* Optional: adds a little breathing room on the sides */
+    }
+
     .hero-description {
         margin: 0 auto 30px;
     }
