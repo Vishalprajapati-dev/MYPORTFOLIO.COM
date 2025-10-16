@@ -284,6 +284,7 @@ section {
 .hero-buttons {
     display: flex;
     gap: 20px;
+    justify-content: center; /* <-- This is the fix */
 }
 
 .hero-image {
@@ -858,6 +859,10 @@ section {
         flex-direction: column;
         text-align: center;
     }
+    .hero-text {
+        margin-left: 0; 
+        padding: 0 20px; 
+    }
     
     .hero-description {
         margin: 0 auto 30px;
@@ -871,6 +876,8 @@ section {
         grid-template-columns: 1fr;
     }
 }
+
+
 
 @media (max-width: 768px) {
     .section-title {
@@ -948,52 +955,3 @@ section {
     }
 }
 
-/* === Final Center Fix for Mobile Hero === */
-@media (max-width: 768px) {
-  .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .hero-content {
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .hero-text, .hero-buttons {
-    text-align: center;
-    justify-content: center;
-  }
-}
-
-
-/* === Final Full-Center Fix (Guaranteed) === */
-@media (max-width: 768px) {
-  .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    min-height: 100vh; /* makes it vertically centered */
-    padding: 0 20px;
-  }
-
-  .hero-content {
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .hero-text, 
-  .hero-buttons {
-    text-align: center;
-    justify-content: center;
-  }
-
-  .hero-image {
-    margin-top: 2rem;
-  }
-}
